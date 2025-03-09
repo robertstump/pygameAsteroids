@@ -1,4 +1,5 @@
 import pygame
+import sys
 from circleShape import CircleShape
 from constants import PLAYER_RADIUS
 from constants import PLAYER_TURN_SPEED
@@ -40,6 +41,10 @@ class Player(CircleShape):
 
         if keys[pygame.K_s]:
             self.move(-dt)
+
+        if keys[pygame.K_ESCAPE]:
+            pygame.quit()
+            sys.exit()
 
     def move(self, dt):
         move_vector = pygame.Vector2(0, 1)
