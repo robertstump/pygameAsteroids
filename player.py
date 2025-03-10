@@ -7,7 +7,7 @@ from constants import PLAYER_TURN_SPEED
 from constants import PLAYER_SPEED
 from constants import PLAYER_SHOT_SPEED
 
-PLAYER_SHOOT_COOLDOWN = 0.3
+PLAYER_SHOOT_COOLDOWN = 0.15
 PLAYER_LINE_WIDTH = 2
 PI = 3.1415927
 

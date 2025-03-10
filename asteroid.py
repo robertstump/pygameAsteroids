@@ -4,6 +4,8 @@ from circleShape import CircleShape
 from constants import ASTEROID_MIN_RADIUS
 from explode import Explosion
 from explode import EXPLODE_MIN_RADIUS
+from constants import SCREEN_WIDTH
+from constants import SCREEN_HEIGHT
 
 ASTEROID_LINE_WIDTH = 2
 
@@ -20,6 +22,16 @@ class Asteroid(CircleShape):
     def update(self, dt):
         self.position += self.velocity * dt
 
+        if(self.position.x < 0 - self.radius):
+            self.position.x = SCREEN_WIDTH + self.radius
+        if(self.position.x > SCREEN_WIDTH + self.radius):
+           self.position.x = 0 - self.radius
+
+        if(self.position.y < 0 - self.radius):
+           self.position.y = SCREEN_HEIGHT + self.radius
+        if(self.position.y > SCREEN_HEIGHT + self.radius):
+            self.position.y = SCREEN_HEIGHT - self.radius
+            
     def explode(self):
         count = random.randint(3, 12)
 
