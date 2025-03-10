@@ -70,7 +70,7 @@ class Player(CircleShape):
 
         self.position += move_vector
 
-        #No need to manually handle the math dumby.....
+        #No need to manually handle the math dummy.....
         #deg_radian = self.rotation * PI / 180
         #selfCos = cmath.cos(deg_radian)
         #selfSin = cmath.sin(deg_radian)
